@@ -1,0 +1,18 @@
+{
+  "4": [
+    { "word": "Type", "gaps": [{ "pair": "Ty", "category": "diagonal-stem" }] },
+    { "word": "Wave", "gaps": [{ "pair": "Wa", "category": "diagonal-round" }] }
+  ],
+  "5": [
+    { "word": "Types", "gaps": [
+      { "pair": "Ty", "category": "diagonal-stem" },
+      { "pair": "yp", "category": "round-stem" }
+    ]}
+  ],
+  "6": [
+    { "word": "Yonder", "gaps": [
+      { "pair": "Yo", "category": "diagonal-round" },
+      { "pair": "nd", "category": "stem-stem" }
+    ]}
+  ]
+}

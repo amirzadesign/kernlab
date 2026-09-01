@@ -1,0 +1,8 @@
+/*
+  Component-specific styles go here as we build each piece:
+  TopBar, Stage, LetterPair, Controls, ScorePanel, Breakdown, Summary.
+
+  Kept separate from base.css/tokens.css so each component's rules
+  are easy to find and, later, easy to peel off into Svelte
+  <style> blocks during the migration.
+*/

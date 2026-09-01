@@ -1,0 +1,30 @@
+:root {
+  /* Terminal palette */
+  --color-bg: #0d1117;
+  --color-surface: #161b22;
+  --color-border: #2a2f38;
+  --color-border-soft: #1c2128;
+  --color-text: #e6edf3;
+  --color-text-dim: #8b949e;
+  --color-text-faint: #5b6470;
+  --color-accent: #7ee787;   /* player's color — green */
+  --color-warn: #e3b341;     /* amber — used for live offset readout */
+  --color-danger: #f85149;   /* red — streak indicator */
+
+  /* Fonts */
+  --font-ui: 'JetBrains Mono', monospace;
+  --font-serif: 'Source Serif 4', serif;
+  --font-sans: 'Source Sans 3', sans-serif;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+
+  /* Radii */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+}
