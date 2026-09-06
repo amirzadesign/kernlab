@@ -1,1 +1,4 @@
-// Small DOM helper utilities (querySelector shorthands, element creation).
+// Tiny DOM helper -- shorthand for querySelector.
+export function qs(selector, root = document) {
+  return root.querySelector(selector);
+}

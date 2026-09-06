@@ -1,9 +1,13 @@
 // Single source of truth for game state (mirrors a Svelte writable store).
-// Other modules never mutate state directly — they call functions in
-// actions.js, which call the setState()-style function exported here.
+// Nothing outside this file ever mutates `state` directly -- actions.js
+// is the only place that calls setState().
 
 let state = {
-  // filled in when we build the actual game loop
+  tier: 4,
+  currentWord: null,   // { word, letters: [...], gaps: [...] }
+  done: false,
+  score: 0,
+  streak: 0,
 };
 
 const listeners = new Set();

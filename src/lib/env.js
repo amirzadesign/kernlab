@@ -1,2 +1,5 @@
-// Environment helpers — e.g. detecting touch vs. mouse input,
-// so components/events.js can decide which interaction path to use.
+// Environment helpers -- currently just touch detection, used later
+// to decide things like nudge-button sizing or interaction hints.
+export function isTouchDevice() {
+  return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+}

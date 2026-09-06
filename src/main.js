@@ -1,25 +1,43 @@
 import './styles/base.css';
 import './styles/components.css';
 
-// This is a deliberately minimal first render — just enough to prove
-// the dev server, fonts, and palette are all wired up correctly.
-// The real game (TopBar, Stage, Controls, etc.) gets built on top
-// of this in the next steps, piece by piece.
+import { getState, subscribe } from './store.js';
+import { initRound, loadPersistedStreak } from './actions.js';
+import { bindEvents } from './lib/events.js';
+
+import { TopBar } from './components/TopBar.js';
+import { Stage } from './components/Stage.js';
+import { Controls } from './components/Controls.js';
+import { ScorePanel } from './components/ScorePanel.js';
 
 const app = document.getElementById('app');
 
-app.innerHTML = `
-  <div class="app" style="align-items:center; justify-content:center; text-align:center;">
-    <div>
-      <div style="color:var(--color-accent); font-size:14px; font-weight:700; letter-spacing:1px;">
-        KERNLAB
-      </div>
-      <div style="font-family:var(--font-serif); font-size:64px; font-weight:600; margin-top:24px;">
-        Type
-      </div>
-      <div style="color:var(--color-text-faint); font-size:12px; margin-top:16px;">
-        v0.1 — scaffold running. The real game starts here.
-      </div>
+function render(state) {
+  app.innerHTML = `
+    <div
+      style="
+        background: var(--color-bg);
+        border-radius: 12px;
+        overflow: hidden;
+        border: 0.5px solid var(--color-border);
+        max-width: 420px;
+        margin: 40px auto;
+      "
+    >
+      ${TopBar(state)}
+      ${Stage(state)}
+      ${Controls(state)}
+      ${ScorePanel(state)}
     </div>
-  </div>
-`;
+  `;
+}
+
+// Re-render on every state change. Event delegation (bindEvents) means
+// we only need to bind listeners once -- no rebinding after each
+// innerHTML replacement.
+subscribe(render);
+bindEvents(app);
+
+loadPersistedStreak();
+initRound(getState().tier);
+render(getState());

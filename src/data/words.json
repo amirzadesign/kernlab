@@ -1,18 +1,76 @@
 {
   "4": [
-    { "word": "Type", "gaps": [{ "pair": "Ty", "category": "diagonal-stem" }] },
-    { "word": "Wave", "gaps": [{ "pair": "Wa", "category": "diagonal-round" }] }
-  ],
-  "5": [
-    { "word": "Types", "gaps": [
-      { "pair": "Ty", "category": "diagonal-stem" },
-      { "pair": "yp", "category": "round-stem" }
-    ]}
-  ],
-  "6": [
-    { "word": "Yonder", "gaps": [
-      { "pair": "Yo", "category": "diagonal-round" },
-      { "pair": "nd", "category": "stem-stem" }
-    ]}
+    {
+      "word": "Type",
+      "pairs": [
+        { "leftChar": "T", "rightChar": "y", "letterIndex": 1, "target": -40, "editable": true, "category": "diagonal-stem" },
+        { "leftChar": "y", "rightChar": "p", "letterIndex": 2, "target": 0, "editable": false },
+        { "leftChar": "p", "rightChar": "e", "letterIndex": 3, "target": 0, "editable": false }
+      ]
+    },
+    {
+      "word": "Wave",
+      "pairs": [
+        { "leftChar": "W", "rightChar": "a", "letterIndex": 1, "target": -70, "editable": true, "category": "diagonal-round" },
+        { "leftChar": "a", "rightChar": "v", "letterIndex": 2, "target": -20, "editable": false },
+        { "leftChar": "v", "rightChar": "e", "letterIndex": 3, "target": -20, "editable": false }
+      ]
+    },
+    {
+      "word": "Void",
+      "pairs": [
+        { "leftChar": "V", "rightChar": "o", "letterIndex": 1, "target": -71, "editable": true, "category": "diagonal-round" },
+        { "leftChar": "o", "rightChar": "i", "letterIndex": 2, "target": 0, "editable": false },
+        { "leftChar": "i", "rightChar": "d", "letterIndex": 3, "target": 0, "editable": false }
+      ]
+    },
+    {
+      "word": "Tour",
+      "pairs": [
+        { "leftChar": "T", "rightChar": "o", "letterIndex": 1, "target": -70, "editable": true, "category": "round-stem" },
+        { "leftChar": "o", "rightChar": "u", "letterIndex": 2, "target": -10, "editable": false },
+        { "leftChar": "u", "rightChar": "r", "letterIndex": 3, "target": 0, "editable": false }
+      ]
+    },
+    {
+      "word": "Wilt",
+      "pairs": [
+        { "leftChar": "W", "rightChar": "i", "letterIndex": 1, "target": -21, "editable": true, "category": "diagonal-stem" },
+        { "leftChar": "i", "rightChar": "l", "letterIndex": 2, "target": 0, "editable": false },
+        { "leftChar": "l", "rightChar": "t", "letterIndex": 3, "target": 0, "editable": false }
+      ]
+    },
+    {
+      "word": "Hold",
+      "pairs": [
+        { "leftChar": "H", "rightChar": "o", "letterIndex": 1, "target": -20, "editable": true, "category": "round-stem" },
+        { "leftChar": "o", "rightChar": "l", "letterIndex": 2, "target": -10, "editable": false },
+        { "leftChar": "l", "rightChar": "d", "letterIndex": 3, "target": 0, "editable": false }
+      ]
+    },
+    {
+      "word": "Bolt",
+      "pairs": [
+        { "leftChar": "B", "rightChar": "o", "letterIndex": 1, "target": 0, "editable": false },
+        { "leftChar": "o", "rightChar": "l", "letterIndex": 2, "target": -10, "editable": true, "category": "round-stem" },
+        { "leftChar": "l", "rightChar": "t", "letterIndex": 3, "target": 0, "editable": false }
+      ]
+    },
+    {
+      "word": "Noon",
+      "pairs": [
+        { "leftChar": "N", "rightChar": "o", "letterIndex": 1, "target": -12, "editable": false },
+        { "leftChar": "o", "rightChar": "o", "letterIndex": 2, "target": 0, "editable": true, "category": "round-round" },
+        { "leftChar": "o", "rightChar": "n", "letterIndex": 3, "target": 0, "editable": false }
+      ]
+    },
+    {
+      "word": "Hill",
+      "pairs": [
+        { "leftChar": "H", "rightChar": "i", "letterIndex": 1, "target": 0, "editable": true, "category": "stem-stem" },
+        { "leftChar": "i", "rightChar": "l", "letterIndex": 2, "target": 0, "editable": false },
+        { "leftChar": "l", "rightChar": "l", "letterIndex": 3, "target": 0, "editable": false }
+      ]
+    }
   ]
 }
