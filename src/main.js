@@ -4,6 +4,7 @@ import './styles/components.css';
 import { getState, subscribe } from './store.js';
 import { initRound, loadPersistedStreak } from './actions.js';
 import { bindEvents } from './lib/events.js';
+import { initOnboarding } from './onboarding.js';
 
 import { TopBar } from './components/TopBar.js';
 import { Stage } from './components/Stage.js';
@@ -41,3 +42,4 @@ bindEvents(app);
 loadPersistedStreak();
 initRound(getState().tier);
 render(getState());
+initOnboarding();

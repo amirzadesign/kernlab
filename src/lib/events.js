@@ -6,6 +6,8 @@
 import { setTier, nudgeActiveGap, commitDone, nextRound, setGapOffset, selectGap } from '../actions.js';
 import { getState } from '../store.js';
 import { pixelsToUnits } from './fonts.js';
+import { openSharePopup } from '../components/SharePopup.js';
+import { notifyDoneForOnboarding } from '../onboarding.js';
 
 export function bindEvents(root) {
   root.addEventListener('click', handleClick);
@@ -33,6 +35,7 @@ function handleClick(e) {
 
   if (action === 'done') {
     commitDone();
+    notifyDoneForOnboarding();
   }
 
   if (action === 'next') {
@@ -40,7 +43,7 @@ function handleClick(e) {
   }
 
   if (action === 'share') {
-    console.log('share clicked (not yet implemented)');
+    openSharePopup();
   }
 }
 

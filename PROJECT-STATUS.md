@@ -37,11 +37,11 @@ any command-line or Git actions).
 
 ## IMPORTANT: local vs. pushed state
 
-As of this file being written, **several rounds of work exist only on
-Amir's local machine** — they have NOT been `git push`-ed yet. If
-resuming from this file in a new session, the first thing to check is
-whether Amir has pushed since. Don't assume GitHub/Netlify reflect the
-latest code.
+As of this session, local and GitHub are back **in sync** — the local
+`.git` folder had been lost (folder was copied without it), so the repo
+was re-initialized and force-pushed from the newer local state on
+2026-09-12. Everything through the 31-word pool expansion is pushed.
+Still worth checking `git status` at the start of any new session.
 
 ## Design decisions locked in (do not re-litigate without reason)
 
