@@ -4,7 +4,8 @@
 
 let state = {
   tier: 4,
-  currentWord: null,   // { word, letters: [...], gaps: [...] }
+  currentWord: null,       // { word, letters: [...], pairs: [...] }
+  activeLetterIndex: null, // which editable pair is currently selected
   done: false,
   score: 0,
   streak: 0,

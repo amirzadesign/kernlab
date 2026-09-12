@@ -1,0 +1,21 @@
+{
+  "_howto": "Words to add to the game. Run: node scripts/extract-kerning.js (preview), then node scripts/extract-kerning.js --write (save). Add/remove entries below freely. A plain string = auto-pick which gaps are editable; an object with \"editable\" = pick manually by letterIndex (position of the LEFT letter of the gap, 1-based: in \"Valor\" the V·a gap is 1, a·l is 2, l·o is 3, o·r is 4).",
+  "words": [
+    "Valor",
+    "Yacht",
+    "Oxide",
+    "Wedge",
+    "Vivid",
+    "Pivot",
+    "Quota",
+    "Avail",
+    "Woven",
+    "Wizard",
+    "Vortex",
+    "Quiver",
+    "Galaxy",
+    "Typify",
+    "Yonder",
+    "Luxury"
+  ]
+}

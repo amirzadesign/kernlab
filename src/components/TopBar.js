@@ -36,7 +36,7 @@ export function TopBar(state) {
     <div>
       <div style="display:flex; align-items:center; justify-content:space-between; padding:14px 16px; border-bottom:0.5px solid var(--color-border);">
         <span style="color:var(--color-accent); font-size:14px; font-weight:700; letter-spacing:1px;">KERNLAB</span>
-        <span style="color:var(--color-accent); font-size:18px;">☰</span>
+        <a href="/about.html" title="About" style="color:var(--color-accent); font-size:18px; text-decoration:none; line-height:1;">☰</a>
       </div>
       <div style="display:flex; gap:6px; padding:10px 16px; border-bottom:0.5px solid var(--color-border); align-items:center;">
         ${tierButtons}

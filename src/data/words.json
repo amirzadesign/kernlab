@@ -3,73 +3,1098 @@
     {
       "word": "Type",
       "pairs": [
-        { "leftChar": "T", "rightChar": "y", "letterIndex": 1, "target": -40, "editable": true, "category": "diagonal-stem" },
-        { "leftChar": "y", "rightChar": "p", "letterIndex": 2, "target": 0, "editable": false },
-        { "leftChar": "p", "rightChar": "e", "letterIndex": 3, "target": 0, "editable": false }
+        {
+          "leftChar": "T",
+          "rightChar": "y",
+          "letterIndex": 1,
+          "target": -40,
+          "editable": true,
+          "category": "diagonal-stem"
+        },
+        {
+          "leftChar": "y",
+          "rightChar": "p",
+          "letterIndex": 2,
+          "target": 0,
+          "editable": false
+        },
+        {
+          "leftChar": "p",
+          "rightChar": "e",
+          "letterIndex": 3,
+          "target": 0,
+          "editable": false
+        }
       ]
     },
     {
       "word": "Wave",
       "pairs": [
-        { "leftChar": "W", "rightChar": "a", "letterIndex": 1, "target": -70, "editable": true, "category": "diagonal-round" },
-        { "leftChar": "a", "rightChar": "v", "letterIndex": 2, "target": -20, "editable": false },
-        { "leftChar": "v", "rightChar": "e", "letterIndex": 3, "target": -20, "editable": false }
+        {
+          "leftChar": "W",
+          "rightChar": "a",
+          "letterIndex": 1,
+          "target": -70,
+          "editable": true,
+          "category": "diagonal-round"
+        },
+        {
+          "leftChar": "a",
+          "rightChar": "v",
+          "letterIndex": 2,
+          "target": -20,
+          "editable": false
+        },
+        {
+          "leftChar": "v",
+          "rightChar": "e",
+          "letterIndex": 3,
+          "target": -20,
+          "editable": false
+        }
       ]
     },
     {
       "word": "Void",
       "pairs": [
-        { "leftChar": "V", "rightChar": "o", "letterIndex": 1, "target": -71, "editable": true, "category": "diagonal-round" },
-        { "leftChar": "o", "rightChar": "i", "letterIndex": 2, "target": 0, "editable": false },
-        { "leftChar": "i", "rightChar": "d", "letterIndex": 3, "target": 0, "editable": false }
+        {
+          "leftChar": "V",
+          "rightChar": "o",
+          "letterIndex": 1,
+          "target": -71,
+          "editable": true,
+          "category": "diagonal-round"
+        },
+        {
+          "leftChar": "o",
+          "rightChar": "i",
+          "letterIndex": 2,
+          "target": 0,
+          "editable": false
+        },
+        {
+          "leftChar": "i",
+          "rightChar": "d",
+          "letterIndex": 3,
+          "target": 0,
+          "editable": false
+        }
       ]
     },
     {
       "word": "Tour",
       "pairs": [
-        { "leftChar": "T", "rightChar": "o", "letterIndex": 1, "target": -70, "editable": true, "category": "round-stem" },
-        { "leftChar": "o", "rightChar": "u", "letterIndex": 2, "target": -10, "editable": false },
-        { "leftChar": "u", "rightChar": "r", "letterIndex": 3, "target": 0, "editable": false }
+        {
+          "leftChar": "T",
+          "rightChar": "o",
+          "letterIndex": 1,
+          "target": -70,
+          "editable": true,
+          "category": "round-stem"
+        },
+        {
+          "leftChar": "o",
+          "rightChar": "u",
+          "letterIndex": 2,
+          "target": -10,
+          "editable": false
+        },
+        {
+          "leftChar": "u",
+          "rightChar": "r",
+          "letterIndex": 3,
+          "target": 0,
+          "editable": false
+        }
       ]
     },
     {
       "word": "Wilt",
       "pairs": [
-        { "leftChar": "W", "rightChar": "i", "letterIndex": 1, "target": -21, "editable": true, "category": "diagonal-stem" },
-        { "leftChar": "i", "rightChar": "l", "letterIndex": 2, "target": 0, "editable": false },
-        { "leftChar": "l", "rightChar": "t", "letterIndex": 3, "target": 0, "editable": false }
+        {
+          "leftChar": "W",
+          "rightChar": "i",
+          "letterIndex": 1,
+          "target": -21,
+          "editable": true,
+          "category": "diagonal-stem"
+        },
+        {
+          "leftChar": "i",
+          "rightChar": "l",
+          "letterIndex": 2,
+          "target": 0,
+          "editable": false
+        },
+        {
+          "leftChar": "l",
+          "rightChar": "t",
+          "letterIndex": 3,
+          "target": 0,
+          "editable": false
+        }
       ]
     },
     {
       "word": "Hold",
       "pairs": [
-        { "leftChar": "H", "rightChar": "o", "letterIndex": 1, "target": -20, "editable": true, "category": "round-stem" },
-        { "leftChar": "o", "rightChar": "l", "letterIndex": 2, "target": -10, "editable": false },
-        { "leftChar": "l", "rightChar": "d", "letterIndex": 3, "target": 0, "editable": false }
+        {
+          "leftChar": "H",
+          "rightChar": "o",
+          "letterIndex": 1,
+          "target": -20,
+          "editable": true,
+          "category": "round-stem"
+        },
+        {
+          "leftChar": "o",
+          "rightChar": "l",
+          "letterIndex": 2,
+          "target": -10,
+          "editable": false
+        },
+        {
+          "leftChar": "l",
+          "rightChar": "d",
+          "letterIndex": 3,
+          "target": 0,
+          "editable": false
+        }
       ]
     },
     {
       "word": "Bolt",
       "pairs": [
-        { "leftChar": "B", "rightChar": "o", "letterIndex": 1, "target": 0, "editable": false },
-        { "leftChar": "o", "rightChar": "l", "letterIndex": 2, "target": -10, "editable": true, "category": "round-stem" },
-        { "leftChar": "l", "rightChar": "t", "letterIndex": 3, "target": 0, "editable": false }
+        {
+          "leftChar": "B",
+          "rightChar": "o",
+          "letterIndex": 1,
+          "target": 0,
+          "editable": false
+        },
+        {
+          "leftChar": "o",
+          "rightChar": "l",
+          "letterIndex": 2,
+          "target": -10,
+          "editable": true,
+          "category": "round-stem"
+        },
+        {
+          "leftChar": "l",
+          "rightChar": "t",
+          "letterIndex": 3,
+          "target": 0,
+          "editable": false
+        }
       ]
     },
     {
       "word": "Noon",
       "pairs": [
-        { "leftChar": "N", "rightChar": "o", "letterIndex": 1, "target": -12, "editable": false },
-        { "leftChar": "o", "rightChar": "o", "letterIndex": 2, "target": 0, "editable": true, "category": "round-round" },
-        { "leftChar": "o", "rightChar": "n", "letterIndex": 3, "target": 0, "editable": false }
+        {
+          "leftChar": "N",
+          "rightChar": "o",
+          "letterIndex": 1,
+          "target": -12,
+          "editable": false
+        },
+        {
+          "leftChar": "o",
+          "rightChar": "o",
+          "letterIndex": 2,
+          "target": 0,
+          "editable": true,
+          "category": "round-round"
+        },
+        {
+          "leftChar": "o",
+          "rightChar": "n",
+          "letterIndex": 3,
+          "target": 0,
+          "editable": false
+        }
       ]
     },
     {
       "word": "Hill",
       "pairs": [
-        { "leftChar": "H", "rightChar": "i", "letterIndex": 1, "target": 0, "editable": true, "category": "stem-stem" },
-        { "leftChar": "i", "rightChar": "l", "letterIndex": 2, "target": 0, "editable": false },
-        { "leftChar": "l", "rightChar": "l", "letterIndex": 3, "target": 0, "editable": false }
+        {
+          "leftChar": "H",
+          "rightChar": "i",
+          "letterIndex": 1,
+          "target": 0,
+          "editable": true,
+          "category": "stem-stem"
+        },
+        {
+          "leftChar": "i",
+          "rightChar": "l",
+          "letterIndex": 2,
+          "target": 0,
+          "editable": false
+        },
+        {
+          "leftChar": "l",
+          "rightChar": "l",
+          "letterIndex": 3,
+          "target": 0,
+          "editable": false
+        }
+      ]
+    }
+  ],
+  "5": [
+    {
+      "word": "Weary",
+      "pairs": [
+        {
+          "leftChar": "W",
+          "rightChar": "e",
+          "letterIndex": 1,
+          "target": -71,
+          "editable": true,
+          "category": "diagonal-round"
+        },
+        {
+          "leftChar": "e",
+          "rightChar": "a",
+          "letterIndex": 2,
+          "target": -10,
+          "editable": false
+        },
+        {
+          "leftChar": "a",
+          "rightChar": "r",
+          "letterIndex": 3,
+          "target": -5,
+          "editable": false
+        },
+        {
+          "leftChar": "r",
+          "rightChar": "y",
+          "letterIndex": 4,
+          "target": 10,
+          "editable": true,
+          "category": "diagonal-stem"
+        }
+      ]
+    },
+    {
+      "word": "Awake",
+      "pairs": [
+        {
+          "leftChar": "A",
+          "rightChar": "w",
+          "letterIndex": 1,
+          "target": -60,
+          "editable": true,
+          "category": "diagonal-round"
+        },
+        {
+          "leftChar": "w",
+          "rightChar": "a",
+          "letterIndex": 2,
+          "target": -16,
+          "editable": false
+        },
+        {
+          "leftChar": "a",
+          "rightChar": "k",
+          "letterIndex": 3,
+          "target": 0,
+          "editable": false
+        },
+        {
+          "leftChar": "k",
+          "rightChar": "e",
+          "letterIndex": 4,
+          "target": -20,
+          "editable": true,
+          "category": "round-stem"
+        }
+      ]
+    },
+    {
+      "word": "Toxic",
+      "pairs": [
+        {
+          "leftChar": "T",
+          "rightChar": "o",
+          "letterIndex": 1,
+          "target": -70,
+          "editable": true,
+          "category": "round-stem"
+        },
+        {
+          "leftChar": "o",
+          "rightChar": "x",
+          "letterIndex": 2,
+          "target": -20,
+          "editable": true,
+          "category": "diagonal-round"
+        },
+        {
+          "leftChar": "x",
+          "rightChar": "i",
+          "letterIndex": 3,
+          "target": 0,
+          "editable": false
+        },
+        {
+          "leftChar": "i",
+          "rightChar": "c",
+          "letterIndex": 4,
+          "target": 0,
+          "editable": false
+        }
+      ]
+    },
+    {
+      "word": "Valor",
+      "pairs": [
+        {
+          "leftChar": "V",
+          "rightChar": "a",
+          "letterIndex": 1,
+          "target": -80,
+          "editable": true,
+          "category": "diagonal-round"
+        },
+        {
+          "leftChar": "a",
+          "rightChar": "l",
+          "letterIndex": 2,
+          "target": 0,
+          "editable": true,
+          "category": "round-stem"
+        },
+        {
+          "leftChar": "l",
+          "rightChar": "o",
+          "letterIndex": 3,
+          "target": 0,
+          "editable": false
+        },
+        {
+          "leftChar": "o",
+          "rightChar": "r",
+          "letterIndex": 4,
+          "target": 0,
+          "editable": false
+        }
+      ]
+    },
+    {
+      "word": "Yacht",
+      "pairs": [
+        {
+          "leftChar": "Y",
+          "rightChar": "a",
+          "letterIndex": 1,
+          "target": -80,
+          "editable": true,
+          "category": "diagonal-round"
+        },
+        {
+          "leftChar": "a",
+          "rightChar": "c",
+          "letterIndex": 2,
+          "target": 0,
+          "editable": true,
+          "category": "round-round"
+        },
+        {
+          "leftChar": "c",
+          "rightChar": "h",
+          "letterIndex": 3,
+          "target": -11,
+          "editable": false
+        },
+        {
+          "leftChar": "h",
+          "rightChar": "t",
+          "letterIndex": 4,
+          "target": -5,
+          "editable": false
+        }
+      ]
+    },
+    {
+      "word": "Oxide",
+      "pairs": [
+        {
+          "leftChar": "O",
+          "rightChar": "x",
+          "letterIndex": 1,
+          "target": 0,
+          "editable": true,
+          "category": "diagonal-round"
+        },
+        {
+          "leftChar": "x",
+          "rightChar": "i",
+          "letterIndex": 2,
+          "target": 0,
+          "editable": false
+        },
+        {
+          "leftChar": "i",
+          "rightChar": "d",
+          "letterIndex": 3,
+          "target": 0,
+          "editable": true,
+          "category": "stem-stem"
+        },
+        {
+          "leftChar": "d",
+          "rightChar": "e",
+          "letterIndex": 4,
+          "target": 0,
+          "editable": false
+        }
+      ]
+    },
+    {
+      "word": "Wedge",
+      "pairs": [
+        {
+          "leftChar": "W",
+          "rightChar": "e",
+          "letterIndex": 1,
+          "target": -71,
+          "editable": true,
+          "category": "diagonal-round"
+        },
+        {
+          "leftChar": "e",
+          "rightChar": "d",
+          "letterIndex": 2,
+          "target": 0,
+          "editable": true,
+          "category": "round-stem"
+        },
+        {
+          "leftChar": "d",
+          "rightChar": "g",
+          "letterIndex": 3,
+          "target": -10,
+          "editable": false
+        },
+        {
+          "leftChar": "g",
+          "rightChar": "e",
+          "letterIndex": 4,
+          "target": -10,
+          "editable": false
+        }
+      ]
+    },
+    {
+      "word": "Vivid",
+      "pairs": [
+        {
+          "leftChar": "V",
+          "rightChar": "i",
+          "letterIndex": 1,
+          "target": -30,
+          "editable": true,
+          "category": "diagonal-stem"
+        },
+        {
+          "leftChar": "i",
+          "rightChar": "v",
+          "letterIndex": 2,
+          "target": -15,
+          "editable": false
+        },
+        {
+          "leftChar": "v",
+          "rightChar": "i",
+          "letterIndex": 3,
+          "target": 0,
+          "editable": false
+        },
+        {
+          "leftChar": "i",
+          "rightChar": "d",
+          "letterIndex": 4,
+          "target": 0,
+          "editable": true,
+          "category": "stem-stem"
+        }
+      ]
+    },
+    {
+      "word": "Pivot",
+      "pairs": [
+        {
+          "leftChar": "P",
+          "rightChar": "i",
+          "letterIndex": 1,
+          "target": 10,
+          "editable": false
+        },
+        {
+          "leftChar": "i",
+          "rightChar": "v",
+          "letterIndex": 2,
+          "target": -15,
+          "editable": true,
+          "category": "diagonal-stem"
+        },
+        {
+          "leftChar": "v",
+          "rightChar": "o",
+          "letterIndex": 3,
+          "target": -20,
+          "editable": true,
+          "category": "diagonal-round"
+        },
+        {
+          "leftChar": "o",
+          "rightChar": "t",
+          "letterIndex": 4,
+          "target": -10,
+          "editable": false
+        }
+      ]
+    },
+    {
+      "word": "Quota",
+      "pairs": [
+        {
+          "leftChar": "Q",
+          "rightChar": "u",
+          "letterIndex": 1,
+          "target": 0,
+          "editable": true,
+          "category": "round-round"
+        },
+        {
+          "leftChar": "u",
+          "rightChar": "o",
+          "letterIndex": 2,
+          "target": -10,
+          "editable": true,
+          "category": "round-round"
+        },
+        {
+          "leftChar": "o",
+          "rightChar": "t",
+          "letterIndex": 3,
+          "target": -10,
+          "editable": false
+        },
+        {
+          "leftChar": "t",
+          "rightChar": "a",
+          "letterIndex": 4,
+          "target": 0,
+          "editable": false
+        }
+      ]
+    },
+    {
+      "word": "Avail",
+      "pairs": [
+        {
+          "leftChar": "A",
+          "rightChar": "v",
+          "letterIndex": 1,
+          "target": -60,
+          "editable": true,
+          "category": "diagonal-diagonal"
+        },
+        {
+          "leftChar": "v",
+          "rightChar": "a",
+          "letterIndex": 2,
+          "target": -16,
+          "editable": false
+        },
+        {
+          "leftChar": "a",
+          "rightChar": "i",
+          "letterIndex": 3,
+          "target": 0,
+          "editable": false
+        },
+        {
+          "leftChar": "i",
+          "rightChar": "l",
+          "letterIndex": 4,
+          "target": 0,
+          "editable": true,
+          "category": "stem-stem"
+        }
+      ]
+    },
+    {
+      "word": "Woven",
+      "pairs": [
+        {
+          "leftChar": "W",
+          "rightChar": "o",
+          "letterIndex": 1,
+          "target": -71,
+          "editable": true,
+          "category": "diagonal-round"
+        },
+        {
+          "leftChar": "o",
+          "rightChar": "v",
+          "letterIndex": 2,
+          "target": 0,
+          "editable": true,
+          "category": "diagonal-round"
+        },
+        {
+          "leftChar": "v",
+          "rightChar": "e",
+          "letterIndex": 3,
+          "target": -20,
+          "editable": false
+        },
+        {
+          "leftChar": "e",
+          "rightChar": "n",
+          "letterIndex": 4,
+          "target": 0,
+          "editable": false
+        }
+      ]
+    }
+  ],
+  "6": [
+    {
+      "word": "Toward",
+      "pairs": [
+        {
+          "leftChar": "T",
+          "rightChar": "o",
+          "letterIndex": 1,
+          "target": -70,
+          "editable": true,
+          "category": "round-stem"
+        },
+        {
+          "leftChar": "o",
+          "rightChar": "w",
+          "letterIndex": 2,
+          "target": 0,
+          "editable": false
+        },
+        {
+          "leftChar": "w",
+          "rightChar": "a",
+          "letterIndex": 3,
+          "target": -16,
+          "editable": true,
+          "category": "diagonal-round"
+        },
+        {
+          "leftChar": "a",
+          "rightChar": "r",
+          "letterIndex": 4,
+          "target": -5,
+          "editable": true,
+          "category": "round-stem"
+        },
+        {
+          "leftChar": "r",
+          "rightChar": "d",
+          "letterIndex": 5,
+          "target": -10,
+          "editable": false
+        }
+      ]
+    },
+    {
+      "word": "Voyage",
+      "pairs": [
+        {
+          "leftChar": "V",
+          "rightChar": "o",
+          "letterIndex": 1,
+          "target": -71,
+          "editable": true,
+          "category": "diagonal-round"
+        },
+        {
+          "leftChar": "o",
+          "rightChar": "y",
+          "letterIndex": 2,
+          "target": -10,
+          "editable": false
+        },
+        {
+          "leftChar": "y",
+          "rightChar": "a",
+          "letterIndex": 3,
+          "target": -16,
+          "editable": true,
+          "category": "diagonal-round"
+        },
+        {
+          "leftChar": "a",
+          "rightChar": "g",
+          "letterIndex": 4,
+          "target": -10,
+          "editable": false
+        },
+        {
+          "leftChar": "g",
+          "rightChar": "e",
+          "letterIndex": 5,
+          "target": -10,
+          "editable": true,
+          "category": "round-round"
+        }
+      ]
+    },
+    {
+      "word": "Wobble",
+      "pairs": [
+        {
+          "leftChar": "W",
+          "rightChar": "o",
+          "letterIndex": 1,
+          "target": -71,
+          "editable": true,
+          "category": "diagonal-round"
+        },
+        {
+          "leftChar": "o",
+          "rightChar": "b",
+          "letterIndex": 2,
+          "target": -10,
+          "editable": true,
+          "category": "round-stem"
+        },
+        {
+          "leftChar": "b",
+          "rightChar": "b",
+          "letterIndex": 3,
+          "target": -10,
+          "editable": false
+        },
+        {
+          "leftChar": "b",
+          "rightChar": "l",
+          "letterIndex": 4,
+          "target": -10,
+          "editable": true,
+          "category": "stem-stem"
+        },
+        {
+          "leftChar": "l",
+          "rightChar": "e",
+          "letterIndex": 5,
+          "target": 0,
+          "editable": false
+        }
+      ]
+    },
+    {
+      "word": "Wizard",
+      "pairs": [
+        {
+          "leftChar": "W",
+          "rightChar": "i",
+          "letterIndex": 1,
+          "target": -21,
+          "editable": true,
+          "category": "diagonal-stem"
+        },
+        {
+          "leftChar": "i",
+          "rightChar": "z",
+          "letterIndex": 2,
+          "target": 0,
+          "editable": true,
+          "category": "diagonal-stem"
+        },
+        {
+          "leftChar": "z",
+          "rightChar": "a",
+          "letterIndex": 3,
+          "target": 0,
+          "editable": false
+        },
+        {
+          "leftChar": "a",
+          "rightChar": "r",
+          "letterIndex": 4,
+          "target": -5,
+          "editable": false
+        },
+        {
+          "leftChar": "r",
+          "rightChar": "d",
+          "letterIndex": 5,
+          "target": -10,
+          "editable": true,
+          "category": "stem-stem"
+        }
+      ]
+    },
+    {
+      "word": "Vortex",
+      "pairs": [
+        {
+          "leftChar": "V",
+          "rightChar": "o",
+          "letterIndex": 1,
+          "target": -71,
+          "editable": true,
+          "category": "diagonal-round"
+        },
+        {
+          "leftChar": "o",
+          "rightChar": "r",
+          "letterIndex": 2,
+          "target": 0,
+          "editable": true,
+          "category": "round-stem"
+        },
+        {
+          "leftChar": "r",
+          "rightChar": "t",
+          "letterIndex": 3,
+          "target": 19,
+          "editable": true,
+          "category": "stem-stem"
+        },
+        {
+          "leftChar": "t",
+          "rightChar": "e",
+          "letterIndex": 4,
+          "target": 0,
+          "editable": false
+        },
+        {
+          "leftChar": "e",
+          "rightChar": "x",
+          "letterIndex": 5,
+          "target": 0,
+          "editable": false
+        }
+      ]
+    },
+    {
+      "word": "Quiver",
+      "pairs": [
+        {
+          "leftChar": "Q",
+          "rightChar": "u",
+          "letterIndex": 1,
+          "target": 0,
+          "editable": true,
+          "category": "round-round"
+        },
+        {
+          "leftChar": "u",
+          "rightChar": "i",
+          "letterIndex": 2,
+          "target": 0,
+          "editable": false
+        },
+        {
+          "leftChar": "i",
+          "rightChar": "v",
+          "letterIndex": 3,
+          "target": -15,
+          "editable": true,
+          "category": "diagonal-stem"
+        },
+        {
+          "leftChar": "v",
+          "rightChar": "e",
+          "letterIndex": 4,
+          "target": -20,
+          "editable": true,
+          "category": "diagonal-round"
+        },
+        {
+          "leftChar": "e",
+          "rightChar": "r",
+          "letterIndex": 5,
+          "target": 0,
+          "editable": false
+        }
+      ]
+    },
+    {
+      "word": "Galaxy",
+      "pairs": [
+        {
+          "leftChar": "G",
+          "rightChar": "a",
+          "letterIndex": 1,
+          "target": 0,
+          "editable": true,
+          "category": "round-round"
+        },
+        {
+          "leftChar": "a",
+          "rightChar": "l",
+          "letterIndex": 2,
+          "target": 0,
+          "editable": true,
+          "category": "round-stem"
+        },
+        {
+          "leftChar": "l",
+          "rightChar": "a",
+          "letterIndex": 3,
+          "target": -10,
+          "editable": true,
+          "category": "round-stem"
+        },
+        {
+          "leftChar": "a",
+          "rightChar": "x",
+          "letterIndex": 4,
+          "target": 0,
+          "editable": false
+        },
+        {
+          "leftChar": "x",
+          "rightChar": "y",
+          "letterIndex": 5,
+          "target": 0,
+          "editable": false
+        }
+      ]
+    },
+    {
+      "word": "Typify",
+      "pairs": [
+        {
+          "leftChar": "T",
+          "rightChar": "y",
+          "letterIndex": 1,
+          "target": -40,
+          "editable": true,
+          "category": "diagonal-stem"
+        },
+        {
+          "leftChar": "y",
+          "rightChar": "p",
+          "letterIndex": 2,
+          "target": 0,
+          "editable": false
+        },
+        {
+          "leftChar": "p",
+          "rightChar": "i",
+          "letterIndex": 3,
+          "target": 0,
+          "editable": true,
+          "category": "stem-stem"
+        },
+        {
+          "leftChar": "i",
+          "rightChar": "f",
+          "letterIndex": 4,
+          "target": 0,
+          "editable": false
+        },
+        {
+          "leftChar": "f",
+          "rightChar": "y",
+          "letterIndex": 5,
+          "target": 10,
+          "editable": true,
+          "category": "diagonal-stem"
+        }
+      ]
+    },
+    {
+      "word": "Yonder",
+      "pairs": [
+        {
+          "leftChar": "Y",
+          "rightChar": "o",
+          "letterIndex": 1,
+          "target": -90,
+          "editable": true,
+          "category": "diagonal-round"
+        },
+        {
+          "leftChar": "o",
+          "rightChar": "n",
+          "letterIndex": 2,
+          "target": 0,
+          "editable": true,
+          "category": "round-stem"
+        },
+        {
+          "leftChar": "n",
+          "rightChar": "d",
+          "letterIndex": 3,
+          "target": 0,
+          "editable": true,
+          "category": "stem-stem"
+        },
+        {
+          "leftChar": "d",
+          "rightChar": "e",
+          "letterIndex": 4,
+          "target": 0,
+          "editable": false
+        },
+        {
+          "leftChar": "e",
+          "rightChar": "r",
+          "letterIndex": 5,
+          "target": 0,
+          "editable": false
+        }
+      ]
+    },
+    {
+      "word": "Luxury",
+      "pairs": [
+        {
+          "leftChar": "L",
+          "rightChar": "u",
+          "letterIndex": 1,
+          "target": -24,
+          "editable": true,
+          "category": "round-stem"
+        },
+        {
+          "leftChar": "u",
+          "rightChar": "x",
+          "letterIndex": 2,
+          "target": 0,
+          "editable": true,
+          "category": "diagonal-round"
+        },
+        {
+          "leftChar": "x",
+          "rightChar": "u",
+          "letterIndex": 3,
+          "target": 0,
+          "editable": false
+        },
+        {
+          "leftChar": "u",
+          "rightChar": "r",
+          "letterIndex": 4,
+          "target": 0,
+          "editable": false
+        },
+        {
+          "leftChar": "r",
+          "rightChar": "y",
+          "letterIndex": 5,
+          "target": 10,
+          "editable": true,
+          "category": "diagonal-stem"
+        }
       ]
     }
   ]

@@ -1,20 +1,17 @@
 // Stage.js -- renders the word itself.
 //
-// Before Done: every letter uses "live" positioning (lib/layout.js),
-// so dragging the one editable pair correctly shifts it and every
-// letter after it, same as real flowing text would.
-//
-// After Done: the main word snaps to "solved" positioning (fully
-// correct throughout), and the one tested letter additionally shows
-// a green "yours" ghost behind it at its live (as-left) position, for
-// comparison. Other letters don't need a ghost -- they were never
-// interactive, so there's nothing of the player's to compare.
+// Every editable letter is draggable/clickable, but only the
+// currently-active one (state.activeLetterIndex) gets the green
+// highlight + blinking cursor pre-Done -- others stay neutral until
+// selected. After Done, EVERY editable letter shows its own "yours"
+// ghost, since scoring covers all of them, not just whichever was
+// last active.
 
 import { unitsToPixels } from '../lib/fonts.js';
 import { computeLetterOffsets } from '../lib/layout.js';
 
 export function Stage(state) {
-  const { currentWord, done } = state;
+  const { currentWord, done, activeLetterIndex } = state;
   if (!currentWord) return '<div></div>';
 
   const { letters, pairs } = currentWord;
@@ -32,8 +29,11 @@ export function Stage(state) {
         return `<span style="position:relative; z-index:2; display:inline-block; transform:translateX(${frontOffsetPx}px);">${char}</span>`;
       }
 
-      const isActive = !done;
-      const frontColor = isActive ? 'var(--color-accent)' : 'var(--color-text)';
+      const isActive = !done && index === activeLetterIndex;
+      // Color no longer changes for the active letter -- that was
+      // distorting how the whole word reads while judging it. The
+      // cursor below is now the only "this is selected" indicator.
+      const frontColor = 'var(--color-text)';
 
       const yoursGhost = done
         ? `<span style="position:absolute; left:0; bottom:0; color:var(--color-accent); opacity:0.55; transform:translateX(${unitsToPixels(liveOffsets[index])}px); display:inline-block; z-index:1; pointer-events:none;">${char}</span>`

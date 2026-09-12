@@ -1,12 +1,9 @@
 // Centralized input handling. One click listener + one drag handler
 // on the app root, using data-action attributes to figure out what
-// to do. This means components never bind their own listeners --
-// they just render markup with the right data-* attributes, and
-// this file is the only place that touches actions.js in response
-// to real user input. Works the same after every re-render, since
-// we're not attaching/detaching per-element listeners each time.
+// to do. Components never bind their own listeners -- this is the
+// only place that calls into actions.js in response to real input.
 
-import { setTier, nudgeGap, commitDone, nextRound, setGapOffset } from '../actions.js';
+import { setTier, nudgeActiveGap, commitDone, nextRound, setGapOffset, selectGap } from '../actions.js';
 import { getState } from '../store.js';
 import { pixelsToUnits } from './fonts.js';
 
@@ -26,15 +23,12 @@ function handleClick(e) {
     setTier(Number(target.dataset.tier));
   }
 
+  if (action === 'select-gap') {
+    selectGap(Number(target.dataset.letterIndex));
+  }
+
   if (action === 'nudge') {
-    const state = getState();
-    if (!state.currentWord) return;
-    // MVP: exactly one editable pair per word, so nudge always
-    // targets it directly. Once multi-gap words exist, this needs
-    // an "active gap" concept (clicking a pair-list row to select it).
-    const editablePair = state.currentWord.pairs.find((p) => p.editable);
-    if (!editablePair) return;
-    nudgeGap(editablePair.letterIndex, Number(target.dataset.dir));
+    nudgeActiveGap(Number(target.dataset.dir));
   }
 
   if (action === 'done') {
@@ -46,7 +40,6 @@ function handleClick(e) {
   }
 
   if (action === 'share') {
-    // Placeholder -- share card + popup menu built in a later step.
     console.log('share clicked (not yet implemented)');
   }
 }
@@ -63,6 +56,9 @@ function handleDragStart(e) {
   const letterIndex = Number(target.dataset.letterIndex);
   const pair = state.currentWord.pairs.find((p) => p.letterIndex === letterIndex && p.editable);
   if (!pair) return; // not a draggable letter
+
+  // Dragging (even a tap with no movement) makes this the active gap.
+  selectGap(letterIndex);
 
   const clientX = e.touches ? e.touches[0].clientX : e.clientX;
   dragState = { letterIndex, startX: clientX, startOffset: pair.offset };

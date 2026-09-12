@@ -1,9 +1,6 @@
-// Controls.js -- nudge buttons + the per-gap offset/target readout list.
-//
-// The target value is the actual answer, so before Done it's genuinely
-// masked (not just dimmed) -- opacity alone still leaves the real
-// digits legible, which defeated the point. Only the offset (the
-// player's own live value) is shown pre-Done.
+// Controls.js -- nudge buttons (act on whichever gap is active) + the
+// clickable pair-list, one row per editable pair. Target values stay
+// masked ("···") until Done.
 
 import { unitsToPixels } from '../lib/fonts.js';
 
@@ -14,23 +11,32 @@ function formatSignedPx(units) {
 }
 
 export function Controls(state) {
-  const { currentWord, done } = state;
+  const { currentWord, done, activeLetterIndex } = state;
   if (!currentWord) return '<div></div>';
 
   const editablePairs = currentWord.pairs.filter((p) => p.editable);
+
   const rows = editablePairs
-    .map((gap) => {
+    .map((pair) => {
+      const isActive = pair.letterIndex === activeLetterIndex;
+      const rowColor = isActive || done ? 'var(--color-text)' : 'var(--color-text-faint)';
+      const marker = isActive ? '›' : '&nbsp;';
+
       const targetDisplay = done
-        ? `<span style="color:var(--color-accent);">${formatSignedPx(gap.target)}</span>`
+        ? `<span style="color:var(--color-accent);">${formatSignedPx(pair.target)}</span>`
         : `<span style="color:var(--color-text-faint);">···</span>`;
 
       return `
-        <div style="color:var(--color-text); display:flex; gap:6px;">
-          <span style="color:var(--color-accent);">›</span>
+        <div
+          data-action="select-gap"
+          data-letter-index="${pair.letterIndex}"
+          style="color:${rowColor}; display:flex; gap:6px; cursor:pointer;"
+        >
+          <span style="color:var(--color-accent);">${marker}</span>
           <span style="flex:1;">
-            ${gap.leftChar}·${gap.rightChar}
+            ${pair.leftChar}·${pair.rightChar}
             &nbsp;offset
-            <span style="display:inline-block; min-width:34px; text-align:left; color:var(--color-warn);">${formatSignedPx(gap.offset)}</span>
+            <span style="display:inline-block; min-width:34px; text-align:left; color:var(--color-warn);">${formatSignedPx(pair.offset)}</span>
             <span style="color:var(--color-text-faint);"> · target </span>
             <span style="display:inline-block; min-width:34px; text-align:left;">${targetDisplay}</span>
           </span>
