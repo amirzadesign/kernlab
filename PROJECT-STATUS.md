@@ -3,11 +3,46 @@
 Last updated: this session. Upload this whole zip (or just this file) to a
 new conversation to resume work with full context.
 
-**Overall state: core game complete, all 5 design decisions built, end-to-end
-browser testing done. The `extract-kerning.js` placeholder has now been
-replaced with a REAL fontkit-based script (done this session) — see
-"Extending the word pool" below. Word pool expanded from 15 to 31 words
-(tier 4: 9, tier 5: 12, tier 6: 10).**
+**Overall state: v1.0 CODE-COMPLETE (2026-09-12).** Core game, all 5
+design decisions, the real fontkit-based `extract-kerning.js`, 31-word
+pool, the About page, the share popup + PNG card, and the onboarding
+tooltip sequence are all built and committed locally. Deploying to
+Netlify is the current step. One caveat: `npm run build` was NOT run
+in-sandbox after the share/onboarding code was written (workspace shell
+was unavailable) — run it locally once before trusting the deploy.
+
+## v1.0 additions (2026-09-12)
+
+- **About page** (`src/about.js` + `about.html`): full real copy —
+  hybrid casual/serious voice, KernType credit, Amir's bio, and the
+  5-example "why some pairs are harder" education section. All example
+  kern values are REAL data from `src/data/words.json` (Source Serif 4,
+  1000 units/em), rendered live via `pairDemo()` at 64px.
+- **Share popup + card** (`src/components/SharePopup.js`,
+  `src/lib/shareCard.js`): terminal-styled `\`-prefixed menu (Download
+  PNG / Copy Image / native Share…, close on backdrop+Esc). Card is a
+  1200×630 canvas rendered at 2× — correct kerning in white with the
+  player's attempt ghosted in green at 50% (same visual language as the
+  in-game reveal), JetBrains Mono chrome, stats line (score/tier/streak),
+  `kernlab.netlify.app` footer. Card blob is generated once when the
+  popup opens and cached, so clipboard/share fire inside the click
+  gesture (Safari requirement). Popup lives on `document.body`, NOT
+  inside `#app`, because `#app` is wiped on every re-render.
+- **Onboarding** (`src/onboarding.js`, `src/lib/onboardingFlag.js`):
+  first-run 4-step tooltip sequence — drag hint → nudge hint → Done
+  hint → post-reveal share hint (step 4 only appears after the first
+  Done, via `notifyDoneForOnboarding()` called from events.js).
+  Progress dots + skip on every step. Tooltips live on `document.body`
+  and re-query their anchor on every state change (re-renders replace
+  the DOM). If Done is hit mid-sequence, it jumps straight to the share
+  hint. The "seen tutorial" flag is isolated in `onboardingFlag.js`
+  (currently localStorage key `kernlab_onboarded`) — deliberately one
+  tiny module so the storage choice can change without touching the
+  sequence.
+- **events.js**: `share` action now opens the popup (was console.log);
+  `done` also notifies onboarding.
+- **components.css**: share popup + tooltip styles, all using existing
+  design tokens.
 
 ## What KernLab is
 

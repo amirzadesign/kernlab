@@ -1,5 +1,8 @@
 // ScorePanel.js -- bottom bar: score + share (dimmed until Done),
 // and the single button that reads "done" then flips to "next".
+//
+// UI chrome sizing bumped up to match the now-much-larger word -- see
+// TopBar.js's note. First pass, tune by eye.
 
 export function ScorePanel(state) {
   const { done, score } = state;
@@ -7,19 +10,19 @@ export function ScorePanel(state) {
   const groupPointer = done ? 'auto' : 'none';
 
   return `
-    <div style="display:flex; align-items:center; justify-content:space-between; padding:12px 16px; border-top:0.5px solid var(--color-border);">
-      <div style="display:flex; align-items:center; gap:10px; opacity:${groupOpacity}; pointer-events:${groupPointer};">
-        <div style="color:var(--color-text-faint); font-size:12px;">
-          <span style="color:var(--color-text); font-size:15px; font-weight:700;">${done ? score : 0}</span><span style="color:var(--color-text-faint);">/100</span>
+    <div style="display:flex; align-items:center; justify-content:space-between; padding:20px 28px; border-top:0.5px solid var(--color-border);">
+      <div style="display:flex; align-items:center; gap:16px; opacity:${groupOpacity}; pointer-events:${groupPointer};">
+        <div style="color:var(--color-text-faint); font-size:16px;">
+          <span style="color:var(--color-text); font-size:22px; font-weight:700;">${done ? score : 0}</span><span style="color:var(--color-text-faint);">/100</span>
         </div>
         <button
           data-action="share"
-          style="font-family:var(--font-ui); font-size:11px; padding:5px 10px; border-radius:var(--radius-sm); border:0.5px solid var(--color-border); background:transparent; color:var(--color-text-faint); cursor:pointer;"
+          style="font-family:var(--font-ui); font-size:15px; padding:8px 16px; border-radius:var(--radius-sm); border:1px solid var(--color-border); background:transparent; color:var(--color-text-faint); cursor:pointer;"
         >share</button>
       </div>
       <button
         data-action="${done ? 'next' : 'done'}"
-        style="font-family:var(--font-ui); font-size:12px; padding:6px 14px; border-radius:var(--radius-sm); border:0.5px solid var(--color-accent); background:var(--color-bg); color:var(--color-accent); cursor:pointer; font-weight:500;"
+        style="font-family:var(--font-ui); font-size:17px; padding:11px 22px; border-radius:var(--radius-sm); border:1px solid var(--color-accent); background:var(--color-bg); color:var(--color-accent); cursor:pointer; font-weight:500;"
       >${done ? 'next →' : 'done'}</button>
     </div>
   `;

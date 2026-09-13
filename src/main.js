@@ -13,20 +13,28 @@ import { ScorePanel } from './components/ScorePanel.js';
 
 const app = document.getElementById('app');
 
+// Full-viewport, full-width layout: TopBar and ScorePanel already use
+// justify-content:space-between with edge padding, so removing this
+// outer width cap naturally sends the logo/hamburger and score/done
+// to the true browser edges, with horizontal rules running full width.
+// Stage still centers the word within whatever space is left, so it
+// doesn't stretch oddly on very wide screens.
 function render(state) {
   app.innerHTML = `
     <div
       style="
+        display: flex;
+        flex-direction: column;
+        height: 100dvh;
+        width: 100%;
         background: var(--color-bg);
-        border-radius: 12px;
         overflow: hidden;
-        border: 0.5px solid var(--color-border);
-        max-width: 420px;
-        margin: 40px auto;
       "
     >
       ${TopBar(state)}
-      ${Stage(state)}
+      <div style="flex: 1; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+        ${Stage(state)}
+      </div>
       ${Controls(state)}
       ${ScorePanel(state)}
     </div>

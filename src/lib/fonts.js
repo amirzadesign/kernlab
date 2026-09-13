@@ -9,7 +9,11 @@
 // correct -- nothing else needs to know about pixels at all.
 
 export const UNITS_PER_EM = 1000; // confirmed for Source Serif 4 & Source Sans 3
-export const WORD_FONT_SIZE_PX = 74; // matches Stage.js's current rendered size
+export const WORD_FONT_SIZE_PX = 180; // desktop-first scale, closer to
+// KernType's own proportions. Fixed (not yet responsive) -- Stage.js
+// imports this same constant for its actual font-size, so the visual
+// size and the drag/scoring math can never drift apart again. First
+// pass; tune this number once it's visible live.
 
 export function unitsToPixels(units, fontSizePx = WORD_FONT_SIZE_PX) {
   return units * (fontSizePx / UNITS_PER_EM);

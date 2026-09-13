@@ -1,6 +1,9 @@
 // Controls.js -- nudge buttons (act on whichever gap is active) + the
 // clickable pair-list, one row per editable pair. Target values stay
 // masked ("···") until Done.
+//
+// UI chrome sizing bumped up to match the now-much-larger word -- see
+// TopBar.js's note. First pass, tune by eye.
 
 import { unitsToPixels } from '../lib/fonts.js';
 
@@ -30,15 +33,15 @@ export function Controls(state) {
         <div
           data-action="select-gap"
           data-letter-index="${pair.letterIndex}"
-          style="color:${rowColor}; display:flex; gap:6px; cursor:pointer;"
+          style="color:${rowColor}; display:flex; gap:8px; cursor:pointer;"
         >
           <span style="color:var(--color-accent);">${marker}</span>
           <span style="flex:1;">
             ${pair.leftChar}·${pair.rightChar}
             &nbsp;offset
-            <span style="display:inline-block; min-width:34px; text-align:left; color:var(--color-warn);">${formatSignedPx(pair.offset)}</span>
+            <span style="display:inline-block; min-width:42px; text-align:left; color:var(--color-warn);">${formatSignedPx(pair.offset)}</span>
             <span style="color:var(--color-text-faint);"> · target </span>
-            <span style="display:inline-block; min-width:34px; text-align:left;">${targetDisplay}</span>
+            <span style="display:inline-block; min-width:42px; text-align:left;">${targetDisplay}</span>
           </span>
         </div>
       `;
@@ -46,22 +49,22 @@ export function Controls(state) {
     .join('');
 
   return `
-    <div style="padding:0 16px 18px; display:flex; flex-direction:column; align-items:center; gap:10px;">
-      <div style="display:flex; align-items:center; gap:2px;">
+    <div style="padding:0 28px 28px; display:flex; flex-direction:column; align-items:center; gap:16px;">
+      <div style="display:flex; align-items:center; gap:4px;">
         <button
           data-action="nudge"
           data-dir="-1"
           ${done ? 'disabled' : ''}
-          style="font-family:var(--font-ui); font-size:28px; width:40px; height:40px; border:none; background:transparent; color:var(--color-accent); cursor:pointer; display:flex; align-items:center; justify-content:center; padding:0; line-height:1;"
+          style="font-family:var(--font-ui); font-size:40px; width:56px; height:56px; border:none; background:transparent; color:var(--color-accent); cursor:pointer; display:flex; align-items:center; justify-content:center; padding:0; line-height:1;"
         >‹</button>
         <button
           data-action="nudge"
           data-dir="1"
           ${done ? 'disabled' : ''}
-          style="font-family:var(--font-ui); font-size:28px; width:40px; height:40px; border:none; background:transparent; color:var(--color-accent); cursor:pointer; display:flex; align-items:center; justify-content:center; padding:0; line-height:1;"
+          style="font-family:var(--font-ui); font-size:40px; width:56px; height:56px; border:none; background:transparent; color:var(--color-accent); cursor:pointer; display:flex; align-items:center; justify-content:center; padding:0; line-height:1;"
         >›</button>
       </div>
-      <div style="width:260px; margin:0 auto; display:flex; flex-direction:column; gap:3px; font-size:12px;">
+      <div style="width:360px; margin:0 auto; display:flex; flex-direction:column; gap:6px; font-size:16px;">
         ${rows}
       </div>
     </div>

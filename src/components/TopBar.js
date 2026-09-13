@@ -1,5 +1,10 @@
 // TopBar.js -- logo, tier selector, streak. Pure render: takes state,
 // returns an HTML string. Click handling lives in lib/events.js.
+//
+// UI chrome sizing bumped up to match the now-much-larger word (see
+// WORD_FONT_SIZE_PX in lib/fonts.js) -- first pass, tune by eye.
+
+import { logoMark } from '../lib/logo.js';
 
 export function TopBar(state) {
   const tiers = [4, 5, 6];
@@ -14,11 +19,11 @@ export function TopBar(state) {
           data-tier="${t}"
           style="
             font-family: var(--font-ui);
-            font-size: 12px;
-            width: 30px;
-            height: 26px;
+            font-size: 16px;
+            width: 44px;
+            height: 38px;
             border-radius: var(--radius-sm);
-            border: 0.5px solid ${active ? 'var(--color-accent)' : 'var(--color-border)'};
+            border: 1px solid ${active ? 'var(--color-accent)' : 'var(--color-border)'};
             background: transparent;
             color: ${active ? 'var(--color-accent)' : 'var(--color-text-faint)'};
             cursor: pointer;
@@ -34,14 +39,14 @@ export function TopBar(state) {
 
   return `
     <div>
-      <div style="display:flex; align-items:center; justify-content:space-between; padding:14px 16px; border-bottom:0.5px solid var(--color-border);">
-        <span style="color:var(--color-accent); font-size:14px; font-weight:700; letter-spacing:1px;">KERNLAB</span>
-        <a href="/about.html" title="About" style="color:var(--color-accent); font-size:18px; text-decoration:none; line-height:1;">☰</a>
+      <div style="display:flex; align-items:center; justify-content:space-between; padding:20px 28px; border-bottom:0.5px solid var(--color-border);">
+        <span aria-label="KernLab">${logoMark(72)}</span>
+        <a href="/about.html" title="About" style="color:var(--color-accent); font-size:28px; text-decoration:none; line-height:1;">☰</a>
       </div>
-      <div style="display:flex; gap:6px; padding:10px 16px; border-bottom:0.5px solid var(--color-border); align-items:center;">
+      <div style="display:flex; gap:10px; padding:16px 28px; border-bottom:0.5px solid var(--color-border); align-items:center;">
         ${tierButtons}
-        <div style="margin-left:auto; color:var(--color-text-faint); font-size:12px; display:flex; align-items:center; gap:5px;">
-          <span style="color:var(--color-danger);">●</span>${state.streak}
+        <div style="margin-left:auto; color:var(--color-text-faint); font-size:16px; display:flex; align-items:center; gap:7px;">
+          <span style="color:var(--color-danger); font-size:14px;">●</span>${state.streak}
         </div>
       </div>
     </div>

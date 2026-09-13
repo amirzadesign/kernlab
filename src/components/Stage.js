@@ -1,14 +1,37 @@
 // Stage.js -- renders the word itself.
 //
 // Every editable letter is draggable/clickable, but only the
-// currently-active one (state.activeLetterIndex) gets the green
-// highlight + blinking cursor pre-Done -- others stay neutral until
-// selected. After Done, EVERY editable letter shows its own "yours"
-// ghost, since scoring covers all of them, not just whichever was
-// last active.
+// currently-active one (state.activeLetterIndex) gets the blinking
+// cursor pre-Done -- others stay neutral until selected. After Done,
+// EVERY editable letter shows its own "yours" ghost, since scoring
+// covers all of them, not just whichever was last active.
+//
+// Font size comes from the single WORD_FONT_SIZE_PX constant in
+// lib/fonts.js -- the same one all drag/nudge/scoring math uses --
+// so the visual size and the interaction math can never drift apart.
+// Padding and cursor dimensions scale proportionally from that one
+// number too, relative to the original 74px baseline they were
+// tuned at.
 
-import { unitsToPixels } from '../lib/fonts.js';
+import { unitsToPixels, WORD_FONT_SIZE_PX } from '../lib/fonts.js';
 import { computeLetterOffsets } from '../lib/layout.js';
+
+const BASELINE_PX = 74; // the size padding was originally tuned for
+const SCALE = WORD_FONT_SIZE_PX / BASELINE_PX;
+
+const PAD_TOP = Math.round(36 * SCALE);
+const PAD_BOTTOM = Math.round(46 * SCALE);
+const MIN_HEIGHT = Math.round(130 * SCALE);
+
+// The cursor is a short baseline tick, not a cap-height bar -- kerning
+// only ever moves a letter horizontally, so a mark implying vertical
+// extent (like our old nearly-full-height version) was misleading.
+// Sized as a fraction of the font size directly, not scaled from the
+// old (wrong) proportions.
+const CURSOR_LEFT = Math.round(WORD_FONT_SIZE_PX * 0.09); // generous enough to clear round letters' left curve
+const CURSOR_TOP_INSET = Math.round(WORD_FONT_SIZE_PX * 0.62); // starts well below cap-height
+const CURSOR_BOTTOM_INSET = Math.round(WORD_FONT_SIZE_PX * 0.08); // small gap below baseline
+const CURSOR_WIDTH = Math.max(2, Math.round(WORD_FONT_SIZE_PX * 0.015));
 
 export function Stage(state) {
   const { currentWord, done, activeLetterIndex } = state;
@@ -30,9 +53,6 @@ export function Stage(state) {
       }
 
       const isActive = !done && index === activeLetterIndex;
-      // Color no longer changes for the active letter -- that was
-      // distorting how the whole word reads while judging it. The
-      // cursor below is now the only "this is selected" indicator.
       const frontColor = 'var(--color-text)';
 
       const yoursGhost = done
@@ -40,7 +60,7 @@ export function Stage(state) {
         : '';
 
       const cursor = isActive
-        ? `<span style="position:absolute; left:-3px; top:4px; bottom:10px; width:2px; background:var(--color-accent); animation:blinkCursor 1s step-start infinite; pointer-events:none;"></span>`
+        ? `<span style="position:absolute; left:-${CURSOR_LEFT}px; top:${CURSOR_TOP_INSET}px; bottom:${CURSOR_BOTTOM_INSET}px; width:${CURSOR_WIDTH}px; background:var(--color-accent); animation:blinkCursor 1s step-start infinite; pointer-events:none; z-index:3;"></span>`
         : '';
 
       return `
@@ -66,8 +86,8 @@ export function Stage(state) {
     .join('');
 
   return `
-    <div style="padding:36px 16px 46px; text-align:center; min-height:130px; position:relative;">
-      <div style="font-family:var(--font-serif); font-size:74px; font-weight:600; color:var(--color-text); line-height:1; position:relative; display:inline-flex; font-kerning:none; font-feature-settings:'kern' 0, 'liga' 0;">
+    <div style="padding:${PAD_TOP}px 16px ${PAD_BOTTOM}px; text-align:center; min-height:${MIN_HEIGHT}px; position:relative; display:flex; align-items:center; justify-content:center;">
+      <div style="font-family:var(--font-serif); font-size:${WORD_FONT_SIZE_PX}px; font-weight:600; color:var(--color-text); line-height:1; position:relative; display:inline-flex; font-kerning:none; font-feature-settings:'kern' 0, 'liga' 0;">
         ${letterSpans}
       </div>
     </div>
